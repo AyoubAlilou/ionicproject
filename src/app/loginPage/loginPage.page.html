@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title>
+      User Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <form>
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" required [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" required  [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" expand="block"  class="col-login" (click)="login()">Sign In
+              <ion-icon name="log-in" class="icon-login"></ion-icon></ion-button>
+            <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+          <ion-item lines="full">
+          <ion-label> Don't have account ?</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+          <ion-button expand="block" routerLink="/register" routerLinkActive="router-link-active"  class="col-login" style="--background : #BF97BA">Register
+            <ion-icon name="add-circle-outline" class="icon-login"></ion-icon></ion-button>
+        </ion-col>
+        </ion-row>
+      </form>
+      <ion-card-header >
+        <ion-card-subtitle>Tiktak PRO mobile Application</ion-card-subtitle>
+        <ion-card-title>Welcome to our community</ion-card-title>
+      </ion-card-header>
+        <div class="main-card">
+          <div >
+              <img src="../../assets/test.png" >
+              
+          </div>
+         
+      </div>
+
+      <ion-card-content>
+       <p>Tiktak PRO premiere application en Tunisie pour la gestion des ventes en ligne.</p>
+     </ion-card-content>
+    </ion-card>
+
+</ion-content>

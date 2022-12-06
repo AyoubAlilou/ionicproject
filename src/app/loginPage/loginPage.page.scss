@@ -1,0 +1,34 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+.header{
+  --background : #B3E0FF	;
+}
+
+.icon-login{
+  margin: 20px;
+}
+.col-login{
+  margin-bottom: 10px;
+}
+
+.main-card{
+  border-color: #575757;
+  border: 4px solid rgb(163, 163, 163);
+  width: 340px;
+  height: 120px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.single-card{
+  border-color: #575757;
+  border: 4px solid rgb(163, 163, 163);
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 5px;
+}

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-back-button text="back" routerLink='/postspage' routerLinkActive="router-link-active" >
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add New Post
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-content>
+    <form>
+      <ion-item lines="full">
+        <ion-label position="floating">Post Title</ion-label>
+        <ion-input type="text" required [(ngModel)]="title" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Post Content </ion-label>
+        <ion-textarea type="textarea" required  [(ngModel)]="content" [ngModelOptions]="{standalone: true}"></ion-textarea>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block"  class="col-login" (click)="addPost()">
+            <ion-icon name="add-circle-outline"></ion-icon>&nbsp;
+            Add New Post
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card-content>
+  </ion-card>
+  <ion-modal id="example-modal"  [isOpen]="this.isOpen">
+    <ng-template>
+      <div class="wrapper">
+        <h1>Post added Successfully  !</h1>
+
+        <ion-list lines="none">
+          <ion-item button="true" detail="false">
+            <ion-icon name="checkbox-outline" class="validated"></ion-icon>
+            <h3 class="dialog-item">Enjoy your journey in our Social media !</h3>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+  <ion-modal id="example-modal"  [isOpen]="this.errorIsOpen">
+    <ng-template>
+      <div class="wrapper">
+        <h1>Verify your informations !</h1>
+        <ion-list lines="none">
+          <ion-item button="true" detail="false" (click)="this.openError()">
+            <ion-icon name="alert-circle-outline" class="alert"></ion-icon>
+            <h3 class="dialog-item" >Missing Information or Badly formatted !</h3>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ng-template>
+  </ion-modal>
+</ion-content>
